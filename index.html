@@ -7,11 +7,10 @@
   <body>
     <a-scene>
       <a-assets>
-        <a-asset-item id="tree-obj" src="/path/to/tree.obj"></a-asset-item>
-        <a-asset-item id="tree-mtl" src="/path/to/tree.mtl"></a-asset-item>
+        <a-asset-item id="test-obj" src="testfile.obj"></a-asset-item>
       </a-assets>
 
-      <a-entity obj-model="obj: #tree-obj; mtl: #tree-mtl"></a-entity>
+      <a-entity obj-model="obj: testfile.obj" scale="0.1 0.1 0.1"></a-entity>
       <a-entity>
         <a-entity geometry="radius:  0.5;  primitive:  cylinder" material="color: red"></a-entity>
         <a-box color="#ffbb00" position="0.06099 0.39506 -1.16592" material="color: #ffbb00" geometry="" rotation="0 0 0.19"></a-box>
