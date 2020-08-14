@@ -3,18 +3,27 @@
   <head>
     <!--Master AFRAME Code -->
     <script src="https://aframe.io/releases/1.0.4/aframe.min.js"></script>
+    <script src="https://threejs.org/examples/js/loaders/FBXLoader.js"></script>
   </head>
   <body>
     <a-scene>
-      <a-assets>
-        <a-asset-item id="test-obj" src="testfile.obj"></a-asset-item>
-      </a-assets>
-
-      <a-entity obj-model="obj: testfile.obj" scale="0.1 0.1 0.1"></a-entity>
-      <a-entity>
+        <a-entity>
         <a-entity geometry="radius:  0.5;  primitive:  cylinder" material="color: red"></a-entity>
         <a-box color="#ffbb00" position="0.06099 0.39506 -1.16592" material="color: #ffbb00" geometry="" rotation="0 0 0.19"></a-box>
-      </a-entity>
-    </a-scene>
+        <a-entity fbx-model="(Fan.fbx);"></a-entity>
+        </a-entity>
+      <a-assets>
+        <a-asset-item id="fan" src="Fan.fbx"></a-asset-item>
+          <!-- Using the asset management system. -->
+
+        <!-- FBX -->
+        <a-entity fbx-model="(Fan.fbx);"></a-entity>
+      </a-assets>
+
+
+
+
+</a-scene>
+
   </body>
 </html>
